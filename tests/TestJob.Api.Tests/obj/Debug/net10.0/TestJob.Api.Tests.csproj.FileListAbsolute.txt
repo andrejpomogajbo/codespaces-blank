@@ -114,3 +114,10 @@
 /workspaces/codespaces-blank/tests/TestJob.Api.Tests/obj/Debug/net10.0/TestJob.Api.Tests.pdb
 /workspaces/codespaces-blank/tests/TestJob.Api.Tests/obj/Debug/net10.0/TestJob.Api.Tests.genruntimeconfig.cache
 /workspaces/codespaces-blank/tests/TestJob.Api.Tests/obj/Debug/net10.0/ref/TestJob.Api.Tests.dll
+/workspaces/codespaces-blank/tests/TestJob.Api.Tests/bin/Debug/net10.0/publish/web.config
+/workspaces/codespaces-blank/tests/TestJob.Api.Tests/bin/Debug/net10.0/publish/appsettings.Development.json
+/workspaces/codespaces-blank/tests/TestJob.Api.Tests/bin/Debug/net10.0/publish/appsettings.json
+/workspaces/codespaces-blank/tests/TestJob.Api.Tests/bin/Debug/net10.0/publish/TestJob.Api.deps.json
+/workspaces/codespaces-blank/tests/TestJob.Api.Tests/bin/Debug/net10.0/publish/TestJob.Api.runtimeconfig.json
+/workspaces/codespaces-blank/tests/TestJob.Api.Tests/bin/Debug/net10.0/publish/TestJob.Api.staticwebassets.endpoints.json
+/workspaces/codespaces-blank/tests/TestJob.Api.Tests/obj/Debug/net10.0/TestJob.Api.Tests.sourcelink.json

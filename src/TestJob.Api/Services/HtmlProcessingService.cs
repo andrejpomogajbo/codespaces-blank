@@ -49,8 +49,7 @@ public sealed class HtmlProcessingService
 
     public async Task InitializeDatabaseAsync(CancellationToken cancellationToken = default)
     {
-        await using var connection = new NpgsqlConnection(_connectionString);
-        await connection.OpenAsync(cancellationToken);
+        await using var connection = await OpenConnectionWithRetryAsync(cancellationToken);
 
         const string sql = @"CREATE TABLE IF NOT EXISTS elements (
             id BIGSERIAL PRIMARY KEY,
@@ -123,8 +122,7 @@ public sealed class HtmlProcessingService
             FullHtml = fullHtml
         }).ToList();
 
-        await using var connection = new NpgsqlConnection(_connectionString);
-        await connection.OpenAsync(cancellationToken);
+        await using var connection = await OpenConnectionWithRetryAsync(cancellationToken);
 
         const string insertSql = "INSERT INTO elements (attribute_value, full_html) VALUES (@AttributeValue, @FullHtml);";
 
@@ -133,6 +131,32 @@ public sealed class HtmlProcessingService
             await connection.ExecuteAsync(
                 new CommandDefinition(insertSql, new { item.AttributeValue, item.FullHtml }, cancellationToken: cancellationToken));
         }
+    }
+
+    private async Task<NpgsqlConnection> OpenConnectionWithRetryAsync(CancellationToken cancellationToken)
+    {
+        for (var attempt = 1; attempt <= 20; attempt++)
+        {
+            var connection = new NpgsqlConnection(_connectionString);
+
+            try
+            {
+                await connection.OpenAsync(cancellationToken);
+                return connection;
+            }
+            catch (NpgsqlException) when (attempt < 20)
+            {
+                await connection.DisposeAsync();
+                await Task.Delay(TimeSpan.FromSeconds(2), cancellationToken);
+            }
+            catch
+            {
+                await connection.DisposeAsync();
+                throw;
+            }
+        }
+
+        throw new TimeoutException("Unable to connect to PostgreSQL after several attempts.");
     }
 
     private static string DecodeBase64String(string value, string target)

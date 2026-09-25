@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestJob.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+982a2d5507d0fba999094ae9e3eb4886a791577e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f13c2d53493b0dd59f6b4fc228e0a645299ef8e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestJob.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestJob.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

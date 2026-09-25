@@ -82,3 +82,11 @@
 /workspace/src/TestJob.Api/obj/Debug/net10.0/TestJob..720C896E.Up2Date
 /workspace/src/TestJob.Api/obj/Debug/net10.0/TestJob.Api.genruntimeconfig.cache
 /workspace/src/TestJob.Api/obj/Debug/net10.0/ref/TestJob.Api.dll
+/workspace/src/TestJob.Api/obj/Debug/net10.0/TestJob.Api.sourcelink.json
+/workspaces/codespaces-blank/src/TestJob.Api/bin/Debug/net10.0/publish/web.config
+/workspaces/codespaces-blank/src/TestJob.Api/bin/Debug/net10.0/publish/appsettings.Development.json
+/workspaces/codespaces-blank/src/TestJob.Api/bin/Debug/net10.0/publish/appsettings.json
+/workspaces/codespaces-blank/src/TestJob.Api/bin/Debug/net10.0/publish/TestJob.Api.deps.json
+/workspaces/codespaces-blank/src/TestJob.Api/bin/Debug/net10.0/publish/TestJob.Api.runtimeconfig.json
+/workspaces/codespaces-blank/src/TestJob.Api/bin/Debug/net10.0/publish/TestJob.Api.staticwebassets.endpoints.json
+/workspaces/codespaces-blank/src/TestJob.Api/obj/Debug/net10.0/TestJob.Api.sourcelink.json

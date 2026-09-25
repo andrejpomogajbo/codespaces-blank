@@ -34,9 +34,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: testjob-api
-    working_dir: /workspace
-    volumes:
-      - .:/workspace
+    working_dir: /app
     ports:
       - "8090:8080"
     environment:
